@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.5.0">
+<eagle version="6.4">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -2502,26 +2502,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="33OHM1/10W1%(0603)" prefix="R" uservalue="yes">
-<description>RES-08270</description>
-<gates>
-<gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="0603">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="PROD_ID" value="RES-08270" constant="no"/>
-<attribute name="VALUE" value="33OHM" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="100KOHM1/10W1%(0603)" prefix="R" uservalue="yes">
 <description>RES-07828</description>
 <gates>
@@ -6255,9 +6235,6 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <part name="LED3" library="SparkFun-LED" deviceset="LED-GREEN" device="0603" value="GREEN"/>
 <part name="LED4" library="SparkFun-LED" deviceset="LED-GREEN" device="0603" value="GREEN"/>
 <part name="LED5" library="SparkFun-LED" deviceset="LED-GREEN" device="0603" value="GREEN"/>
-<part name="R18" library="SparkFun-Resistors" deviceset="33OHM1/10W1%(0603)" device="" value="330"/>
-<part name="R19" library="SparkFun-Resistors" deviceset="33OHM1/10W1%(0603)" device="" value="330"/>
-<part name="R20" library="SparkFun-Resistors" deviceset="33OHM1/10W1%(0603)" device="" value="330"/>
 <part name="P+5" library="SparkFun" deviceset="VCC" device=""/>
 <part name="JP5" library="SparkFun" deviceset="LOGO-SFE" device="NEW"/>
 <part name="U3" library="SparkFun-Boards" deviceset="ARDUINO_R3_SHIELD" device=""/>
@@ -6266,6 +6243,9 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <part name="JP4" library="SparkFun" deviceset="FIDUCIAL" device="1X2"/>
 <part name="JP6" library="SparkFun" deviceset="FIDUCIAL" device="1X2"/>
 <part name="LOGO1" library="SparkFun-Aesthetics" deviceset="SFE_LOGO_FLAME" device=".2_INCH"/>
+<part name="R20" library="SparkFun-Resistors" deviceset="1KOHM1/10W1%(0603)" device="" value="1K"/>
+<part name="R21" library="SparkFun-Resistors" deviceset="1KOHM1/10W1%(0603)" device="" value="1K"/>
+<part name="R22" library="SparkFun-Resistors" deviceset="1KOHM1/10W1%(0603)" device="" value="1K"/>
 </parts>
 <sheets>
 <sheet>
@@ -6376,12 +6356,6 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 </instance>
 <instance part="LED4" gate="G$1" x="144.78" y="53.34" rot="R270"/>
 <instance part="LED5" gate="G$1" x="142.24" y="40.64" rot="R90"/>
-<instance part="R18" gate="G$1" x="93.98" y="48.26" smashed="yes">
-<attribute name="NAME" x="90.17" y="49.7586" size="1.778" layer="95"/>
-<attribute name="VALUE" x="90.17" y="44.958" size="1.778" layer="96"/>
-</instance>
-<instance part="R19" gate="G$1" x="157.48" y="48.26"/>
-<instance part="R20" gate="G$1" x="195.58" y="58.42" rot="R270"/>
 <instance part="P+5" gate="1" x="195.58" y="50.8" rot="R180"/>
 <instance part="JP5" gate="G$1" x="241.3" y="17.78"/>
 <instance part="U3" gate="G$1" x="27.94" y="53.34"/>
@@ -6390,6 +6364,9 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <instance part="JP4" gate="G$1" x="246.38" y="40.64"/>
 <instance part="JP6" gate="G$1" x="241.3" y="40.64"/>
 <instance part="LOGO1" gate="G$1" x="137.16" y="5.08"/>
+<instance part="R20" gate="G$1" x="195.58" y="58.42" rot="R90"/>
+<instance part="R21" gate="G$1" x="96.52" y="48.26" rot="R180"/>
+<instance part="R22" gate="G$1" x="160.02" y="48.26" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -6420,9 +6397,9 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <label x="86.36" y="60.96" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<wire x1="104.14" y1="48.26" x2="99.06" y2="48.26" width="0.1524" layer="91"/>
-<pinref part="R18" gate="G$1" pin="2"/>
+<wire x1="104.14" y1="48.26" x2="101.6" y2="48.26" width="0.1524" layer="91"/>
 <label x="104.14" y="48.26" size="1.27" layer="95" xref="yes"/>
+<pinref part="R21" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="OUTB1" class="0">
@@ -6616,8 +6593,8 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 </segment>
 <segment>
 <wire x1="195.58" y1="50.8" x2="195.58" y2="53.34" width="0.1524" layer="91"/>
-<pinref part="R20" gate="G$1" pin="2"/>
 <pinref part="P+5" gate="1" pin="VCC"/>
+<pinref part="R20" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -7012,9 +6989,9 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <label x="149.86" y="60.96" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<wire x1="162.56" y1="48.26" x2="167.64" y2="48.26" width="0.1524" layer="91"/>
-<pinref part="R19" gate="G$1" pin="2"/>
+<wire x1="165.1" y1="48.26" x2="167.64" y2="48.26" width="0.1524" layer="91"/>
 <label x="167.64" y="48.26" size="1.27" layer="95" xref="yes"/>
+<pinref part="R22" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$16" class="0">
@@ -7023,18 +7000,18 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <wire x1="149.86" y1="40.64" x2="147.32" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="149.86" y1="53.34" x2="149.86" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="149.86" y1="48.26" x2="149.86" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="48.26" x2="152.4" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="48.26" x2="154.94" y2="48.26" width="0.1524" layer="91"/>
 <junction x="149.86" y="48.26"/>
 <pinref part="LED4" gate="G$1" pin="A"/>
 <pinref part="LED5" gate="G$1" pin="C"/>
-<pinref part="R19" gate="G$1" pin="1"/>
+<pinref part="R22" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$18" class="0">
 <segment>
 <wire x1="195.58" y1="66.04" x2="195.58" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="LED1" gate="G$1" pin="A"/>
-<pinref part="R20" gate="G$1" pin="1"/>
+<pinref part="R20" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$14" class="0">
@@ -7043,11 +7020,11 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <wire x1="83.82" y1="40.64" x2="86.36" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="53.34" x2="86.36" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="48.26" x2="86.36" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="86.36" y1="48.26" x2="88.9" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="48.26" x2="91.44" y2="48.26" width="0.1524" layer="91"/>
 <junction x="86.36" y="48.26"/>
 <pinref part="LED2" gate="G$1" pin="A"/>
 <pinref part="LED3" gate="G$1" pin="C"/>
-<pinref part="R18" gate="G$1" pin="1"/>
+<pinref part="R21" gate="G$1" pin="2"/>
 </segment>
 </net>
 </nets>
