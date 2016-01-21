@@ -26,6 +26,9 @@ Distributed as-is; no warranty is given.
 #define BRAKEGND 3
 #define CS_THRESHOLD 100
 
+#define PWM_MAX  255
+#define PWM_HALF 127
+
 /*  VNH2SP30 pin definitions
  xxx[0] controls '1' outputs
  xxx[1] controls '2' outputs */
@@ -56,18 +59,18 @@ void setup()
     digitalWrite(inApin[i], LOW);
     digitalWrite(inBpin[i], LOW);
   }
-  // motorGo(0, CW, 1023);
-  // motorGo(1, CCW, 1023);
+  // motorGo(0, CW, PWM_MAX);
+  // motorGo(1, CCW, PWM_MAX);
 }
 
 void loop()
 {
-  motorGo(0, CW, 1023);
-  motorGo(1, CCW, 1023);
+  motorGo(0, CW, PWM_MAX);
+  motorGo(1, CCW, PWM_MAX);
   delay(500);
 
-  motorGo(0, CCW, 1023);
-  motorGo(1, CW, 1023);
+  motorGo(0, CCW, PWM_MAX);
+  motorGo(1, CW, PWM_MAX);
   delay(500);
   
   if ((analogRead(cspin[0]) < CS_THRESHOLD) && (analogRead(cspin[1]) < CS_THRESHOLD))
@@ -98,7 +101,7 @@ void motorOff(int motor)
  2: CounterClockwise
  3: Brake to GND
  
- pwm: should be a value between ? and 1023, higher the number, the faster
+ pwm: should be a value between ? and 255, higher the number, the faster
  it'll go
  */
 void motorGo(uint8_t motor, uint8_t direct, uint8_t pwm)
