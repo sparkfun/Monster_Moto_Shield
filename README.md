@@ -5,7 +5,18 @@ Monster Moto Shield
 *Monster Moto Shield (DEV-10182)*](https://www.sparkfun.com/products/10182)
 
 This motor shield contains a pair of VNH2SP30 full-bridge motor drivers, pitched for the 5mm screw terminals. 
-It has a voltage max of 16V, and has a max current rating of 30A. 
+
+Features
+-------------------
+* Voltage max: 16V
+* Maximum current rating: 30 A
+* Practical Continuous Current: 14 A
+* Current sensing available to Arduino analog pin
+* MOSFET on-resistance: 19 mΩ (per leg)
+* Maximum PWM frequency: 20 kHz
+* Thermal Shutdown
+* Undervoltage and Overvoltage shutdown
+
 
 Repository Contents
 -------------------
