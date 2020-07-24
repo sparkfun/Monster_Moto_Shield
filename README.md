@@ -1,8 +1,7 @@
 Monster Moto Shield
 ===================
 
-[![Monster Moto Shield](https://cdn.sparkfun.com//assets/parts/4/4/9/1/10182-01.jpg)
-*Monster Moto Shield (DEV-10182)*](https://www.sparkfun.com/products/10182)
+[![Monster Moto Shield](https://cdn.sparkfun.com//assets/parts/4/4/9/1/10182-01.jpg "Monster Moto Shield")](https://www.sparkfun.com/products/10182)
 
 This motor shield contains a pair of VNH2SP30 full-bridge motor drivers, pitched for the 5mm screw terminals. 
 
@@ -22,7 +21,8 @@ Repository Contents
 -------------------
 * **/Firmware** - Example Arduino sketch 
 * **/Hardware** - All Eagle design files (.brd, .sch)
-* **/Production** - Test bed files and production panel files
+<!--- * **/Production** - Test bed files and production panel files
+This folder doesn't actually resist, so I removed it from the README. --->
 
 
 License Information
